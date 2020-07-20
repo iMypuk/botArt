@@ -1,0 +1,3 @@
+[DEBUG] 2020-07-20 18:34:57.803 [JavaFX Application Thread] MainApp - Loading FXML for main view from: /fxml/hello.fxml
+[DEBUG] 2020-07-20 18:34:58.733 [JavaFX Application Thread] VkbotController - Настройки загружены
+[DEBUG] 2020-07-20 18:34:58.733 [JavaFX Application Thread] MainApp - Showing JFX scene

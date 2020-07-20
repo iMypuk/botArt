@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>vk</groupId>
+    <artifactId>botArt</artifactId>
+    <name>botArt</name>
+
+    <packaging>jar</packaging>
+    <version>0.0.1-SNAPSHOT</version>
+    
+    <organization>
+        <!-- Used as the 'Vendor' for JNLP generation -->
+        <name>com</name>
+    </organization>
+
+    <properties>
+        <slf4j.version>1.7.12</slf4j.version>
+        <log4j.version>1.2.17</log4j.version>
+    </properties>
+
+    <build>
+
+        <finalName>botArt</finalName>
+
+        <plugins>
+
+            <plugin>
+                <groupId>com.zenjava</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
+                <version>8.1.5</version>
+                <configuration>
+
+                    <mainClass>vk.botArt.MainApp</mainClass>
+
+                    <!-- only required if signing the jar file -->
+                    <keyStoreAlias>example-user</keyStoreAlias>
+                    <keyStorePassword>example-password</keyStorePassword>
+                    <allPermissions>true</allPermissions>
+
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
+
+
+    <dependencies>
+	
+		<!--  MySql -->
+	
+		<dependency>
+			    <groupId>mysql</groupId>
+			    <artifactId>mysql-connector-java</artifactId>
+			    <version>8.0.11</version>
+		</dependency>
+	
+		<dependency>
+		      <groupId>org.apache.logging.log4j</groupId>
+		      <artifactId>log4j-slf4j-impl</artifactId>
+		      <version>2.7</version>
+	    </dependency>
+
+		<dependency>
+		      <groupId>org.apache.logging.log4j</groupId>
+		      <artifactId>log4j-api</artifactId>
+		      <version>2.7</version>
+    	</dependency>
+    	<dependency>
+		      <groupId>org.apache.logging.log4j</groupId>
+		      <artifactId>log4j-core</artifactId>
+		      <version>2.7</version>
+    	</dependency>
+		
+    	<!-- Simple Json -->
+    	
+    	<dependency>
+            <groupId>com.googlecode.json-simple</groupId>
+            <artifactId>json-simple</artifactId>
+            <version>1.1.1</version>
+        </dependency>
+    	
+    	<!-- VK -->
+    
+		<dependency>
+		  <groupId>com.vk.api</groupId>
+		  <artifactId>sdk</artifactId>
+		  <version>0.5.12</version>
+		</dependency>
+	    
+        <!-- MigLayout -->
+
+        <dependency>
+            <groupId>com.miglayout</groupId>
+            <artifactId>miglayout-javafx</artifactId>
+            <version>5.0</version>
+        </dependency>
+
+        <!-- Apache Commons -->
+
+        <dependency>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+            <version>2.6</version>
+        </dependency>
+
+        <!-- Logging  -->
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>jcl-over-slf4j</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>${log4j.version}</version>
+        </dependency>
+
+    </dependencies>
+
+</project>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import org.tbee.javafx.scene.layout.fxml.MigPane?>
+<?import layouttests.migfxml.sample1.*?>
+
+<MigPane id="rootPane" fx:controller="vk.botArt.VkbotController"
+        styleClass="main-panel"
+        cols="[label, pref!][grow, 50::]"
+        xmlns:fx="http://javafx.com/fxml">
+
+
+    <Label text="Логин:" MigPane.cc="skip, align right"/> <TextField text="79281105630" fx:id="loginField" prefColumnCount="10" MigPane.cc="wrap, align right, span" />
+    <Label text="Пароль:" MigPane.cc="skip, align right"/> <TextField text="swersh6" fx:id="passField" prefColumnCount="10" MigPane.cc="wrap, align right" />
+
+    <Button text="Авторизация" onAction="#auth" MigPane.cc=" gap :push, wrap, span" />
+
+    <Label fx:id="messageLabel" text="text" styleClass="hello-message" MigPane.cc="span 3, wrap, align right"/>
+    
+    <Label text="Адрес сообщества:" MigPane.cc=" align left"/> <TextField text="https://vk.com/gotimefriends" fx:id="groupUrl" prefColumnCount="20" MigPane.cc=" wrap" />
+    
+    <Label text="Кол-во друзей, от:" /> <TextField text="250" onKeyPressed="#ratioCount" fx:id="friendsCount" prefColumnCount="3" MigPane.cc="wrap"/>
+    
+    <Label text="Кол-во подписчиков, до:" /> <TextField text="50" onKeyPressed="#ratioCount" fx:id="followersCount" prefColumnCount="3" MigPane.cc="wrap"/> 
+    
+    <Label text="Соотношение друзей к подписчикам:" fx:id="ratioFrFol" MigPane.cc="span, wrap"/>
+    
+    <Label text="Задержка, от:" /> <TextField text="600" fx:id="delay_from" prefColumnCount="3" MigPane.cc="wrap"/> 
+    
+    <Label text="Задержка, до:" /> <TextField text="1800" fx:id="delay_to" prefColumnCount="3" MigPane.cc="wrap"/> 
+    
+    <Button text="Пуск" fx:id="start" onAction="#addFromGroup" MigPane.cc="split, align center, grow 1, span" />     
+    
+    <Button text="Стоп" fx:id="stop" onAction="#stopped" MigPane.cc="wrap, align center,grow 1" />  
+        
+    <Label fx:id="totalFriends" text="Добавлено: 0" styleClass="countFriends-message" MigPane.cc="span, growx, gaptop 5" />
+    
+    <!-- <Button text="TEST" onAction="#" MigPane.cc="skip, gap :push, gaptop 15, wrap" />  -->
+   
+</MigPane >
